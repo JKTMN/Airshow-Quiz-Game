@@ -1,0 +1,79 @@
+[
+    {
+        "question": "You receive an email claiming to be from the aircraft’s manufacturer, asking for login credentials to 'update software.' What do you do?",
+        "answerA": "Provide the credentials to ensure the software is updated.",
+        "answerB": "Verify the email sender before providing any information.",
+        "correct": "B",
+        "feedback": "Correct! Always verify the sender before sharing sensitive information to avoid phishing scams."
+    },
+    {
+        "question": "The aircraft's communication system is running on outdated software. You notice an available update. What do you do?",
+        "answerA": "Apply the update immediately to keep the system secure.",
+        "answerB": "Ignore the update to avoid potential downtime during a flight.",
+        "correct": "A",
+        "feedback": "Correct! Applying updates immediately is crucial to patch known vulnerabilities."
+    },
+    {
+        "question": "The aircraft offers Wi-Fi to passengers. A passenger requests to connect to the cockpit’s network for faster internet. What do you do?",
+        "answerA": "Allow the connection, ensuring good customer service.",
+        "answerB": "Deny the request and keep the cockpit’s network isolated.",
+        "correct": "B",
+        "feedback": "Correct! The cockpit’s network must remain isolated to prevent unauthorized access and potential security breaches."
+    },
+    {
+        "question": "You find a USB stick in the aircraft’s lounge labeled 'Flight Data Logs.' What do you do?",
+        "answerA": "Plug it into the aircraft’s computer to check the data.",
+        "answerB": "Report it to the cybersecurity team and do not plug it in.",
+        "correct": "B",
+        "feedback": "Correct! Plugging in unknown USB devices can introduce malware into the system."
+    },
+    {
+        "question": "A technician requests remote access to the aircraft’s systems for routine maintenance. What do you do?",
+        "answerA": "Grant access but monitor the session closely.",
+        "answerB": "Require the technician to provide identification and verify the request before granting access.",
+        "correct": "B",
+        "feedback": "Correct! Always verify the identity and legitimacy of remote access requests to prevent unauthorized intrusions."
+    },
+    {
+        "question": "The aircraft’s data transmission protocols are set to an older, less secure encryption standard. What do you do?",
+        "answerA": "Update the protocols to the latest encryption standard.",
+        "answerB": "Keep the current settings to avoid compatibility issues.",
+        "correct": "A",
+        "feedback": "Correct! Upgrading to the latest encryption standard is essential to ensure secure data transmission."
+    },
+    {
+        "question": "You detect unusual network activity on the aircraft’s systems, possibly indicating an intrusion. What do you do?",
+        "answerA": "Disconnect the affected systems from the network and investigate.",
+        "answerB": "Ignore it, assuming it’s a false alarm.",
+        "correct": "A",
+        "feedback": "Correct! Promptly isolating and investigating suspicious activity is crucial to preventing potential cyberattacks."
+    },
+    {
+        "question": "The aircraft’s systems use a single, easy-to-remember password shared among the crew. What do you do?",
+        "answerA": "Implement a strong, unique password policy for each crew member.",
+        "answerB": "Keep the current password for convenience.",
+        "correct": "A",
+        "feedback": "Correct! Strong, unique passwords for each user reduce the risk of unauthorized access."
+    },
+    {
+        "question": "A crew member suggests installing a third-party application on the aircraft’s systems for better in-flight entertainment. What do you do?",
+        "answerA": "Install the app to improve the passenger experience.",
+        "answerB": "Review the app’s security and obtain approval before installation.",
+        "correct": "B",
+        "feedback": "Correct! Always review and approve third-party software to ensure it doesn’t introduce vulnerabilities."
+    },
+    {
+        "question": "The aircraft’s passenger Wi-Fi is on the same network as the control systems to save costs. What do you do?",
+        "answerA": "Keep the current setup to save money.",
+        "answerB": "Segregate the networks to prevent potential security risks.",
+        "correct": "B",
+        "feedback": "Correct! Network segmentation is essential to protect critical systems from being accessed via less secure networks."
+    },
+    {
+        "question": "You notice that the aircraft’s security system is configured with default passwords. What do you do?",
+        "answerA": "Change the default passwords to strong, unique passwords.",
+        "answerB": "Keep the default passwords to avoid complicating the system.",
+        "correct": "A",
+        "feedback": "Correct! Changing default passwords to strong, unique ones is crucial to securing the system against unauthorized access."
+    }
+]
