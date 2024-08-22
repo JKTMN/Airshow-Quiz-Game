@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyber Defense: Protect the Aircraft</title>
     <link href="https://fonts.googleapis.com/css?family=Top+One&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <h1 id="title">Cyber Defense: Protect the Aircraft!</h1>
@@ -18,28 +18,26 @@
             <p>Answer incorrectly however,
             And the typhoon becomes
             more vulnerable!</p>
-            <label id="nameLabel" for="nameInput">Enter your name to begin:</label> <br>
-            <input id="input" type="text" name="nameInput">
-            <button id="begin" type="submit">Begin</button>
+            <form action="{{ url_for('game') }}" method="GET">
+                <label id="nameLabel" for="nameInput">Enter your name to begin:</label> <br>
+                <input id="input" type="text" name="nameInput" required>
+                <button id="begin" type="submit">Begin</button>
+            </form>
 
         </div>
         <div class="right-col">
             <div class="leaderboard-box">
                 <h2>Leader board</h2>
-                <ul>
-                    <li>Placeholder 1</li>
-                    <li>Placeholder 2</li>
-                    <li>Placeholder 3</li>
-                    <li>Placeholder 4</li>
-                    <li>Placeholder 5</li>
-                    <li>Placeholder 6</li>
-                    <li>Placeholder 7</li>
-                    <li>Placeholder 8</li>
-                    <li>Placeholder 9</li>
-                    <li>Placeholder 10</li>
+                <ul id="leaderboard-list">
                 </ul>
             </div>
         </div>
     </div>
+    
+    <script>window.onload = function() {
+        updateLeaderboardDisplay();
+    };</script>
+
+    <script src="{{ url_for('static', filename='gamescript.js') }}"></script>
 </body>
 </html>

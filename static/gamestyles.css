@@ -6,6 +6,7 @@ body, html {
     flex-direction: column;
     font-family: Top One;
     font-weight: Regular;
+    user-select: none;
 }
 
 #title {
@@ -109,4 +110,16 @@ body, html {
     max-height: 25%;
     align-self: center;
     margin: 10px;
+}
+
+#statusMessage {
+    align-self: center;
+}
+
+#feedback {
+    align-self: center;
+}
+
+#stopwatch {
+    align-self: center;
 }

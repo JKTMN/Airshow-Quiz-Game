@@ -5,16 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cyber Defense: Protect the Aircraft</title>
     <link href="https://fonts.googleapis.com/css?family=Top+One&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="gamestyles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='gamestyles.css') }}">
 </head>
 <body>
     <h1 id="title">Cyber Defense: Protect the Aircraft!</h1>
     <div id="countdown"></div>
-
+    <p id="stopwatch">0</p>
+    <br>
+    <p id="statusMessage">Unsecured</p>
     <div class="progress-bar">
         <div class="progress"></div>
     </div>
-    <img id="typhoon" src="images/typhoon.jpg">
+    <!-- <img id="typhoon" src="images/typhoon.jpg"> -->
 
     <div class="question-box">
         <h2 id="question"></h2>
@@ -28,8 +30,9 @@
     <button class="answer-button" id="answerBBtn">B</button>
     </div>
 
-    <div class="feedback" id="feedback"></div>
+    <p id="feedback"></p>
 
-    <script src="gamescript.js"></script>
+
+    <script src="{{ url_for('static', filename='gamescript.js') }}"></script>
 </body>
 </html>
