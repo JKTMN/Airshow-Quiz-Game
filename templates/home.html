@@ -8,16 +8,17 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1 id="title">Cyber Defense: Protect the Aircraft!</h1>
+    <img id="title" src="../static/images/secure-the-aircraft.png">
     <div class="container">
         <div class="left-col">
-            <p>You have 30 seconds to defend 
-            the typhoon from a cyber attack!</p>
-            <p>Answering questions correctly 
-            increases the typhoons security!</p>
-            <p>Answer incorrectly however,
-            And the typhoon becomes
+            <p>The plane is under attack! A <span style="color: red;">cyber</span>
+                attack!</p>
+            <p>Answer 10 questions correctly to increase the 
+                planes security and stop the attack!</p>
+            <p>Answer 5 questions incorrectly however,
+            And the plane becomes
             more vulnerable!</p>
+            <p>How fast are you, can you make the top of the leaderboard?</p>
             <form action="{{ url_for('game') }}" method="GET">
                 <label id="nameLabel" for="nameInput">Enter your name to begin:</label> <br>
                 <input id="input" type="text" name="nameInput" required>

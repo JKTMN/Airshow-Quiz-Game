@@ -8,15 +8,19 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='gamestyles.css') }}">
 </head>
 <body>
-    <h1 id="title">Cyber Defense: Protect the Aircraft!</h1>
+    <img id="title" src="../static/images/secure-the-aircraft.png">
     <div id="countdown"></div>
     <p id="stopwatch">0</p>
     <br>
     <p id="statusMessage">Unsecured</p>
-    <div class="progress-bar">
-        <div class="progress"></div>
+    <div class="progress-bar-container">
+        <img id="progress-image" src="../static/images/barplane.png">
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
     </div>
-    <!-- <img id="typhoon" src="images/typhoon.jpg"> -->
+    <div id="overlay" class="overlay"></div>
+    <div id="endMessage" class="end-message"></div>
 
     <div class="question-box">
         <h2 id="question"></h2>

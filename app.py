@@ -17,22 +17,27 @@ def read_leaderboard():
         except json.JSONDecodeError:
             return []
 
+
 def write_leaderboard(leaderboard):
     with open(LEADERBOARD_FILE, 'w') as f:
         json.dump(leaderboard, f, indent=4)
+
 
 @app.route('/')
 def home():
     return render_template('home.html')
 
+
 @app.route('/game')
 def game():
     return render_template('game.html')
+
 
 @app.route('/leaderboard', methods=['GET'])
 def get_leaderboard():
     leaderboard = read_leaderboard()
     return jsonify(leaderboard)
+
 
 @app.route('/leaderboard', methods=['POST'])
 def update_leaderboard():
@@ -52,7 +57,6 @@ def update_leaderboard():
 
     leaderboard = leaderboard[:10]
 
-    # Add positions
     for i, entry in enumerate(leaderboard):
         entry['position'] = i + 1
 

@@ -75,5 +75,286 @@
         "answerB": "Keep the default passwords to avoid complicating the system.",
         "correct": "A",
         "feedback": "Changing default passwords to strong, unique ones is crucial to securing the system against unauthorized access."
+    },
+    {
+        "question": "You receive a request to update the flight management system (FMS) software from an unfamiliar source. What do you do?",
+        "answerA": "Update the software as requested.",
+        "answerB": "Verify the request with the FMS provider before taking any action.",
+        "correct": "B",
+        "feedback": "Always verify the legitimacy of software update requests to prevent unauthorized alterations."
+    },
+    {
+        "question": "The aircraft’s GPS system has not been updated in a while. You find an update available from a trusted source. What do you do?",
+        "answerA": "Apply the update immediately.",
+        "answerB": "Wait until the aircraft is grounded for a scheduled check.",
+        "correct": "A",
+        "feedback": "Applying updates promptly is crucial for ensuring navigation systems are secure and accurate."
+    },
+    {
+        "question": "You receive a phone call from someone claiming to be from the aircraft's IT support, asking for your login details to fix a network issue. What do you do?",
+        "answerA": "Provide the login details to resolve the issue quickly.",
+        "answerB": "Verify the caller's identity through official channels before providing any information.",
+        "correct": "B",
+        "feedback": "Always verify the identity of anyone asking for sensitive information to prevent social engineering attacks."
+    },
+    {
+        "question": "A passenger reports finding an unsecured Wi-Fi network labeled 'Aircraft Control' on their device. What do you do?",
+        "answerA": "Investigate the network and alert cybersecurity immediately.",
+        "answerB": "Ignore the report, assuming it’s a false alarm.",
+        "correct": "A",
+        "feedback": "Unsecured networks should be investigated promptly to prevent potential security breaches."
+    },
+    {
+        "question": "You discover that the aircraft’s maintenance logs are being stored on an unsecured server. What do you do?",
+        "answerA": "Continue storing logs on the server for convenience.",
+        "answerB": "Secure the server immediately and move the logs to a protected environment.",
+        "correct": "B",
+        "feedback": "Sensitive data, such as maintenance logs, should always be stored on secure servers to prevent unauthorized access."
+    },
+    {
+        "question": "A third-party vendor requests access to the aircraft's systems for a routine audit. What do you do?",
+        "answerA": "Grant access immediately to ensure the audit is completed on time.",
+        "answerB": "Verify the vendor's credentials and limit access to only the necessary systems.",
+        "correct": "B",
+        "feedback": "Always verify third-party access requests and limit their access to essential systems to minimize security risks."
+    },
+    {
+        "question": "During a flight, the aircraft’s Wi-Fi system stops working. A passenger offers to help by connecting their device to the network. What do you do?",
+        "answerA": "Allow the passenger to help to restore the service quickly.",
+        "answerB": "Deny the offer and rely on authorized personnel to troubleshoot the issue.",
+        "correct": "B",
+        "feedback": "Only authorized personnel should be allowed to troubleshoot or access the aircraft's systems."
+    },
+    {
+        "question": "You notice that the aircraft’s firewall settings have been disabled. What do you do?",
+        "answerA": "Re-enable the firewall immediately and investigate the cause.",
+        "answerB": "Leave the settings as they are to avoid disrupting current operations.",
+        "correct": "A",
+        "feedback": "Firewalls are critical for network security. They should be enabled and properly configured at all times."
+    },
+    {
+        "question": "A colleague suggests sharing the aircraft’s flight plan with an external party via email. What do you do?",
+        "answerA": "Share the flight plan to ensure coordination.",
+        "answerB": "Encrypt the flight plan before sharing or use a secure method of transmission.",
+        "correct": "B",
+        "feedback": "Sensitive information like flight plans should always be encrypted or transmitted securely to prevent unauthorized access."
+    },
+    {
+        "question": "You receive an invitation to join a new online forum for aircraft pilots, requiring you to provide details about your aircraft. What do you do?",
+        "answerA": "Join the forum to network with other pilots.",
+        "answerB": "Research the forum's legitimacy before sharing any information.",
+        "correct": "B",
+        "feedback": "Always verify the legitimacy of online platforms before sharing sensitive information."
+    },
+    {
+        "question": "While performing maintenance, you find a previously unknown connection on the aircraft's network. What do you do?",
+        "answerA": "Disconnect the connection and report it to cybersecurity.",
+        "answerB": "Ignore it if it doesn't seem to cause any issues.",
+        "correct": "A",
+        "feedback": "Unknown connections should be investigated immediately to prevent unauthorized access."
+    },
+    {
+        "question": "You are tasked with backing up the aircraft’s flight data. How should you proceed?",
+        "answerA": "Backup the data to a secure, encrypted storage location.",
+        "answerB": "Backup the data to any available storage for quick access.",
+        "correct": "A",
+        "feedback": "Backing up sensitive data to a secure, encrypted location ensures its protection against unauthorized access."
+    },
+    {
+        "question": "A friend asks you to share detailed flight data for research purposes. What do you do?",
+        "answerA": "Share the data since it's for academic purposes.",
+        "answerB": "Refer the request to the appropriate department and ensure proper protocols are followed.",
+        "correct": "B",
+        "feedback": "Sharing sensitive data should always follow the proper protocols to ensure it is handled securely."
+    },
+    {
+        "question": "During a routine check, you notice an aircraft’s software is outdated. What do you do?",
+        "answerA": "Update the software during the next scheduled maintenance.",
+        "answerB": "Update the software immediately to ensure security.",
+        "correct": "B",
+        "feedback": "Updating software promptly is essential to maintain security and protect against vulnerabilities."
+    },
+    {
+        "question": "You are requested to provide flight operation data over an unsecured communication channel. What do you do?",
+        "answerA": "Provide the data to avoid delays.",
+        "answerB": "Insist on using a secure communication channel before sharing any data.",
+        "correct": "B",
+        "feedback": "Sensitive data should only be transmitted over secure channels to prevent unauthorized access."
+    },
+    {
+        "question": "An aircraft part supplier sends an email attachment with updated manuals. What should you do before opening the attachment?",
+        "answerA": "Open the attachment immediately to review the manuals.",
+        "answerB": "Scan the attachment for malware before opening it.",
+        "correct": "B",
+        "feedback": "Attachments from external sources should always be scanned for malware before being opened."
+    },
+    {
+        "question": "You are informed that a pilot's login credentials were compromised in a recent data breach. What should be done immediately?",
+        "answerA": "Change the compromised credentials immediately.",
+        "answerB": "Monitor the account for unusual activity but keep the credentials unchanged.",
+        "correct": "A",
+        "feedback": "Changing compromised credentials immediately is critical to prevent unauthorized access."
+    },
+    {
+        "question": "You’re asked to access the aircraft's control system using a shared crew password. What do you do?",
+        "answerA": "Use the shared password for convenience.",
+        "answerB": "Request a unique password for your use to ensure better security.",
+        "correct": "B",
+        "feedback": "Using unique passwords for each individual ensures better security and reduces the risk of unauthorized access."
+    },
+    {
+        "question": "A new software tool is suggested for monitoring in-flight performance. What do you do before installing it?",
+        "answerA": "Install the tool immediately to start monitoring.",
+        "answerB": "Evaluate the tool's security and compatibility with the aircraft systems before installation.",
+        "correct": "B",
+        "feedback": "New software should be evaluated for security and compatibility before being installed on critical systems."
+    },
+    {
+        "question": "You receive a request to participate in an online survey about aircraft operations, requiring detailed system information. What do you do?",
+        "answerA": "Provide the information to contribute to the survey.",
+        "answerB": "Verify the survey's legitimacy and obtain approval before participating.",
+        "correct": "B",
+        "feedback": "Sensitive information should only be shared after verifying the legitimacy of the request and obtaining proper approval."
+    },
+    {
+        "question": "During a flight, you notice an unsecured laptop in the cockpit. What should you do?",
+        "answerA": "Leave it as it is to avoid disturbing the crew.",
+        "answerB": "Secure the laptop immediately and ensure it is password protected.",
+        "correct": "B",
+        "feedback": "Unsecured devices in the cockpit should be secured immediately to prevent unauthorized access."
+    },
+    {
+        "question": "A colleague suggests using a free online tool to calculate flight routes. What do you do?",
+        "answerA": "Use the tool to streamline the process.",
+        "answerB": "Evaluate the tool’s security and reliability before use.",
+        "correct": "B",
+        "feedback": "Free online tools should be evaluated for security and reliability before being used in critical operations."
+    },
+    {
+        "question": "You receive a request to connect the aircraft's systems to a new, unknown network. What do you do?",
+        "answerA": "Connect to the network to test its capabilities.",
+        "answerB": "Verify the network’s security and obtain approval before connecting.",
+        "correct": "B",
+        "feedback": "Unknown networks should be verified for security and approved before connecting to any aircraft systems."
+    },
+    {
+        "question": "The aircraft's black box data is to be analyzed by an external contractor. What do you do before sharing the data?",
+        "answerA": "Share the data to expedite the analysis.",
+        "answerB": "Ensure the contractor is verified and the data is transmitted securely.",
+        "correct": "B",
+        "feedback": "Sensitive data like black box information should only be shared with verified entities using secure transmission methods."
+    },
+    {
+        "question": "You notice that the aircraft’s Wi-Fi access points have weak passwords. What do you do?",
+        "answerA": "Change the passwords to strong, unique ones immediately.",
+        "answerB": "Keep the current passwords to avoid disruptions.",
+        "correct": "A",
+        "feedback": "Using strong, unique passwords for Wi-Fi access points is essential to prevent unauthorized access."
+    },
+    {
+        "question": "An engineer requests to install a software patch on the aircraft's system just before takeoff. What do you do?",
+        "answerA": "Approve the installation to ensure the system is up to date.",
+        "answerB": "Postpone the installation until the aircraft is safely on the ground.",
+        "correct": "B",
+        "feedback": "Critical system updates should be postponed until the aircraft is grounded to avoid potential in-flight issues."
+    },
+    {
+        "question": "You find an unfamiliar device connected to the aircraft's onboard network. What do you do?",
+        "answerA": "Disconnect the device and investigate its purpose.",
+        "answerB": "Leave the device connected if it doesn’t cause any issues.",
+        "correct": "A",
+        "feedback": "Unfamiliar devices connected to the network should be disconnected and investigated to prevent security risks."
+    },
+    {
+        "question": "You’re asked to share flight data logs with a researcher outside the company. What do you do?",
+        "answerA": "Share the logs to support the research.",
+        "answerB": "Ensure the researcher is authorized and share the data securely.",
+        "correct": "B",
+        "feedback": "Flight data logs should only be shared with authorized individuals and via secure methods."
+    },
+    {
+        "question": "A passenger finds an open access point labeled 'Aircraft Systems' on their device. What do you do?",
+        "answerA": "Investigate and ensure the network is secured.",
+        "answerB": "Ignore it as long as the systems are functioning correctly.",
+        "correct": "A",
+        "feedback": "Open access points on critical systems should be investigated and secured immediately."
+    },
+    {
+        "question": "The cockpit systems are still using a default manufacturer password. What do you do?",
+        "answerA": "Change the password to a strong, unique one.",
+        "answerB": "Keep the default password for ease of use.",
+        "correct": "A",
+        "feedback": "Default passwords should be replaced with strong, unique ones to prevent unauthorized access."
+    },
+    {
+        "question": "You’re about to connect a personal device to the aircraft’s network. What should you consider first?",
+        "answerA": "Connect it to check emails quickly.",
+        "answerB": "Ensure the device is secure and approved for use on the network.",
+        "correct": "B",
+        "feedback": "Personal devices should be secured and approved before connecting to critical networks to avoid introducing risks."
+    },
+    {
+        "question": "During maintenance, you find an outdated software version running on the aircraft’s system. What should you do?",
+        "answerA": "Update the software immediately.",
+        "answerB": "Schedule the update for the next maintenance window.",
+        "correct": "A",
+        "feedback": "Updating software immediately helps to protect against vulnerabilities and ensures system security."
+    },
+    {
+        "question": "You receive an urgent request to share cockpit camera footage. What should you do?",
+        "answerA": "Share the footage immediately to comply with the request.",
+        "answerB": "Verify the legitimacy of the request and ensure secure transmission.",
+        "correct": "B",
+        "feedback": "Cockpit camera footage is sensitive and should only be shared after verifying the request and using secure methods."
+    },
+    {
+        "question": "A pilot reports that the in-flight entertainment system is displaying unusual messages. What should you do?",
+        "answerA": "Investigate the issue immediately to determine if there is a security breach.",
+        "answerB": "Reboot the system and continue the flight.",
+        "correct": "A",
+        "feedback": "Unusual behavior in onboard systems should be investigated immediately to rule out security threats."
+   
+    },
+    {
+        "question": "A technician needs to access the aircraft's diagnostic system remotely for troubleshooting. What should you do?",
+        "answerA": "Provide remote access immediately to expedite the troubleshooting process.",
+        "answerB": "Verify the technician's credentials and ensure that the remote session is secured before granting access.",
+        "correct": "B",
+        "feedback": "Remote access should only be granted after verifying credentials and ensuring the session is secure to prevent unauthorized access."
+    },
+    {
+        "question": "You discover that the aircraft’s communication logs are being stored without encryption. What is your next step?",
+        "answerA": "Encrypt the communication logs to protect sensitive information.",
+        "answerB": "Continue storing the logs as they are to avoid disrupting current processes.",
+        "correct": "A",
+        "feedback": "Encrypting communication logs is essential to safeguard sensitive data and protect against unauthorized access."
+    },
+    {
+        "question": "During a routine check, you find that the aircraft’s firewall settings are not configured correctly. What should you do?",
+        "answerA": "Reconfigure the firewall settings according to the security policy.",
+        "answerB": "Leave the settings as they are to avoid causing potential disruptions.",
+        "correct": "A",
+        "feedback": "Proper firewall configuration is crucial for protecting the aircraft’s systems from unauthorized access and potential threats."
+    },
+    {
+        "question": "A flight crew member reports receiving a suspicious message on their onboard tablet. What should you do?",
+        "answerA": "Advise the crew member to delete the message and continue with their tasks.",
+        "answerB": "Investigate the message to determine if it poses a security threat and take appropriate action.",
+        "correct": "B",
+        "feedback": "Suspicious messages should be investigated to identify potential security threats and prevent possible breaches."
+    },
+    {
+        "question": "The aircraft’s maintenance system is due for a security review. What should you ensure during this review?",
+        "answerA": "Verify that all security patches and updates have been applied and review access controls.",
+        "answerB": "Perform the review quickly to minimize downtime without checking all security aspects.",
+        "correct": "A",
+        "feedback": "A thorough security review should include checking for all updates, patches, and proper access controls to ensure system integrity."
+    },
+    {
+        "question": "You are asked to temporarily disable an aircraft system for testing purposes. What precautions should you take?",
+        "answerA": "Ensure that the system is disabled in a controlled manner and that all security protocols are followed.",
+        "answerB": "Disable the system quickly to complete the test without additional precautions.",
+        "correct": "A",
+        "feedback": "Disabling systems temporarily should be done with caution, following security protocols to prevent introducing vulnerabilities."
     }
 ]

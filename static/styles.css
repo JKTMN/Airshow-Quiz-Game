@@ -1,4 +1,9 @@
-body, html {
+body {
+    background-image: url(./images/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -7,12 +12,16 @@ body, html {
     font-family: Top One;
     font-weight: Regular;
     user-select: none;
+    overflow: hidden;
+    margin-top: 2rem;
 }
 
 #title {
     margin-top: 20px;
-    font-size: 36px;
-    text-align: center;
+    align-self: center;
+    max-width: 550px;
+    max-height: 550px;
+    z-index: -1;
 }
 
 .container {
@@ -59,7 +68,7 @@ body, html {
     margin-top: 2em;
   }
 
-  #begin {
+#begin {
     border: 2px solid transparent;
     width: 7.6em;
     height: 2.5em;
@@ -70,17 +79,17 @@ body, html {
     border-radius: 10px;
     transition: all 0.5s;
     margin-left: 1em;
-  }
-  
-  #input:hover,
-  #input:focus, #begin:hover, #begin:focus {
+}
+
+#input:hover,
+#input:focus, #begin:hover, #begin:focus {
     border: 2px solid #4A9DEC;
     box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
     background-color: white;
-  }
+}
 
 
-  .leaderboard-box {
+.leaderboard-box {
     background-color: lightgrey;
     border-radius: 15px;
     padding: 20px;

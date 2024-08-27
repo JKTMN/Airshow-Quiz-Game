@@ -1,4 +1,9 @@
-body, html {
+body {
+    background-image: url(./images/background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -7,35 +12,64 @@ body, html {
     font-family: Top One;
     font-weight: Regular;
     user-select: none;
+    overflow: hidden;
+    margin-top: 2rem;
 }
 
 #title {
     margin-top: 20px;
-    font-size: 36px;
-    text-align: center;
+    align-self: center;
+    max-width: 550px;
+    max-height: 550px;
+    z-index: -1;
 }
 
 #countdown {
+    margin-top: 1rem;
     align-self: center;
+    font-size: 48px;
 }
 
-.progress-bar {
+.progress-bar-container {
+    position: relative;
     width: 80%;
     background-color: #f3f3f3;
     border-radius: 25px;
     margin-bottom: 20px;
+    margin-top: 3rem;
     align-self: center;
+    height: 30px; /* Adjust height as needed */
 }
+
+.progress-bar {
+    width: 100%;
+    height: 100%;
+    background-color: #f3f3f3;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
 .progress {
-    height: 20px;
+    height: 100%;
     background-color: green;
     border-radius: 25px;
     width: 0;
 }
+
+#progress-image {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 140px;
+    z-index: 2;
+}
+
+
 .question-box {
+    margin-top: 3rem;
     margin-bottom: 20px;
     text-align: left;
-    background-color: lightgray;
     max-width: 50%;
     width: 100%;
     height: 100%;
@@ -105,13 +139,6 @@ body, html {
     color: #333;
 }
 
-#typhoon {
-    max-width: 30%;
-    max-height: 25%;
-    align-self: center;
-    margin: 10px;
-}
-
 #statusMessage {
     align-self: center;
 }
@@ -122,4 +149,31 @@ body, html {
 
 #stopwatch {
     align-self: center;
+    font-size: x-large;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.end-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 8px;
+    z-index: 1000;
+    font-size: 18px;
+    text-align: center;
 }
