@@ -90,6 +90,18 @@ Open your browser and go to `http://127.0.0.1:5000` (or your server's address).
   * `gamescript.js`: Handles game logic, question loading, and leaderboard updates.
   * `statsScript.js`: Handles the statistics calculations and data export.
 
+## Data Tracking
+
+This game does not collect any personal information beyond what is necessary for its operation. Specifically:
+
+- **Leaderboard Names**: The only personal information collected is the name provided by the user when they start the game. This name is used solely for display purposes on the leaderboard. If a user's name does not appear on the leaderboard, it is deleted from our records.
+
+- **Stat Tracking**: The game tracks two key statistics:
+  - **Number of Players Started**: The total count of players who have initiated the game.
+  - **Number of Players Completed**: The total count of players who have completed the game.
+
+No additional personal data is collected or stored, and the game is designed to ensure user privacy and data security.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
