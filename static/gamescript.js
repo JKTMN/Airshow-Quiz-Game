@@ -11,7 +11,7 @@ let currentQuestion = null;
 let availableQuestions = [];
 let correctAnswers = 0;
 let totalQuestions = 0;
-const totalQuestionsToWin = 5;
+const totalQuestionsToWin = 10;
 let incorrectAnswers = 0;
 const originalImageSrc = '../static/images/barplane.png';
 const incorrectImageSrc = '../static/images/explosion.gif';
@@ -25,6 +25,40 @@ const feedbackElement = document.getElementById('feedback');
 const progressBar = document.querySelector('.progress');
 const progressImage = document.getElementById('progress-image');
 
+let quizCompleteCounter = localStorage.getItem('quizCompleteCounter');
+if (quizCompleteCounter === null) {
+    quizCompleteCounter = 0;
+    localStorage.setItem('quizCompleteCounter', quizCompleteCounter);
+} else {
+    quizCompleteCounter = parseInt(quizCompleteCounter);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+
+    let playerCounter = localStorage.getItem('playerCounter');
+
+    if (playerCounter === null) {
+        playerCounter = 0;
+    } else {
+        playerCounter = parseInt(playerCounter, 10);
+    }
+
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            playerCounter += 1;
+            alert(playerCounter);
+            localStorage.setItem('playerCounter', playerCounter);
+
+            localStorage.setItem('lastDebugLog', `Form submitted. Player counter incremented to: ${playerCounter}`);
+        });
+    } else {
+        console.error('Form element not found. Cannot attach submit event listener.');
+    }
+
+    updateLeaderboardDisplay();
+});
+
 
 function startStopWatch() {
     intervalId = setInterval(() => {
@@ -34,14 +68,12 @@ function startStopWatch() {
     }, 1000);
 }
 
-
 function stopStopWatch() {
     if (intervalId) {
         clearInterval(intervalId);
         intervalId = null;
     }
 }
-
 
 async function getLeaderboard() {
     try {
@@ -55,7 +87,6 @@ async function getLeaderboard() {
         return [];
     }
 }
-
 
 async function saveLeaderboard(leaderboard) {
     try {
@@ -75,7 +106,6 @@ async function saveLeaderboard(leaderboard) {
     }
 }
 
-
 async function updateLeaderboard(name, time) {
     const newEntry = { "position": 0, "name": name, "time": `${time} seconds` };
 
@@ -89,7 +119,6 @@ async function updateLeaderboard(name, time) {
 
     updateLeaderboardDisplay();
 }
-
 
 function updateLeaderboardDisplay() {
     getLeaderboard().then(leaderboard => {
@@ -106,7 +135,6 @@ function updateLeaderboardDisplay() {
     });
 }
 
-
 function showEndMessage(message) {
     const overlayElement = document.getElementById('overlay');
     const endMessageElement = document.getElementById('endMessage');
@@ -121,9 +149,13 @@ function showEndMessage(message) {
     }, 5000);
 }
 
-
 function checkIfQuizComplete() {
     if (correctAnswers >= 10) {
+        quizCompleteCounter++;
+        alert(quizCompleteCounter);
+        localStorage.setItem('quizCompleteCounter', quizCompleteCounter);
+        console.log(`Quiz completion counter: ${quizCompleteCounter}`);
+
         stopStopWatch();
         updateLeaderboard(name, time);
         showEndMessage(`Quiz complete! It took you ${time} seconds.`);
@@ -132,7 +164,6 @@ function checkIfQuizComplete() {
         }, 5000);
     }
 }
-
 
 function loadQuestion() {
     if (availableQuestions.length === 0) {
@@ -153,7 +184,6 @@ function loadQuestion() {
     enableAnswerButtons();
 }
 
-
 function checkAnswer(answer) {
     if (isProcessingAnswer) return;
 
@@ -171,7 +201,7 @@ function checkAnswer(answer) {
             correctAnswers--;
         }
 
-        if (incorrectAnswers >= 1) {
+        if (incorrectAnswers >= 5) {
             progressImage.src = incorrectImageSrc;
             progressImage.style.height = "1500px";
             stopStopWatch();
@@ -191,7 +221,6 @@ function checkAnswer(answer) {
     }, 3000);
 }
 
-
 function updateProgressBar(correctAnswers, totalQuestionsToWin) {
     const progressPercentage = (correctAnswers / totalQuestionsToWin) * 100;
     progressBar.style.width = `${progressPercentage}%`;
@@ -202,17 +231,14 @@ function updateProgressBar(correctAnswers, totalQuestionsToWin) {
     progressImage.style.left = `${newImagePosition}px`;
 }
 
-
 function resetProgressImage() {
     progressImage.src = originalImageSrc;
     progressImage.style.height = "140px";
 }
 
-
 function nextQuestion() {
     loadQuestion();
 }
-
 
 fetch('/static/questions.json')
     .then(response => {
@@ -229,35 +255,32 @@ fetch('/static/questions.json')
     })
     .catch(error => console.error('Error loading the questions:', error));
 
+function updateStatusMessage() {
+    const statusMessageElement = document.getElementById("statusMessage");
 
-    function updateStatusMessage() {
-        const statusMessageElement = document.getElementById("statusMessage");
-    
-        if (correctAnswers >= 0 && correctAnswers <= 2) {
-            statusMessageElement.textContent = "Unsecured";
-            statusMessageElement.style.color = "red";
-            progressBar.style.backgroundColor = "red";
-        } else if (correctAnswers >= 3 && correctAnswers <= 5) {
-            statusMessageElement.textContent = "Securing";
-            statusMessageElement.style.color = "orange";
-            progressBar.style.backgroundColor = "orange";
-        } else if (correctAnswers >= 6 && correctAnswers <= 8) {
-            statusMessageElement.textContent = "Securing";
-            statusMessageElement.style.color = "gold";
-            progressBar.style.backgroundColor = "gold";
-        } else if (correctAnswers >= 9) {
-            statusMessageElement.textContent = "Secured";
-            statusMessageElement.style.color = "green";
-            progressBar.style.backgroundColor = "green";
-        }
+    if (correctAnswers >= 0 && correctAnswers <= 2) {
+        statusMessageElement.textContent = "Unsecured";
+        statusMessageElement.style.color = "red";
+        progressBar.style.backgroundColor = "red";
+    } else if (correctAnswers >= 3 && correctAnswers <= 5) {
+        statusMessageElement.textContent = "Securing";
+        statusMessageElement.style.color = "orange";
+        progressBar.style.backgroundColor = "orange";
+    } else if (correctAnswers >= 6 && correctAnswers <= 8) {
+        statusMessageElement.textContent = "Securing";
+        statusMessageElement.style.color = "gold";
+        progressBar.style.backgroundColor = "gold";
+    } else if (correctAnswers >= 9) {
+        statusMessageElement.textContent = "Secured";
+        statusMessageElement.style.color = "green";
+        progressBar.style.backgroundColor = "green";
     }
-
+}
 
 function disableAnswerButtons() {
     answerABtn.disabled = true;
     answerBBtn.disabled = true;
 }
-
 
 function enableAnswerButtons() {
     answerABtn.disabled = false;
@@ -273,3 +296,14 @@ setTimeout(() => {
 
 updateLeaderboardDisplay();
 updateStatusMessage();
+
+
+
+
+// function resetCounters() {
+//     localStorage.setItem('playerCounter', 0);
+//     localStorage.setItem('quizCompleteCounter', 0);
+//     console.log('Player counter and quiz complete counter has been reset to 0');
+// }
+
+// resetCounters();

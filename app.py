@@ -32,6 +32,10 @@ def home():
 def game():
     return render_template('game.html')
 
+@app.route('/stats')
+def stats():
+    return render_template('stats.html')
+
 
 @app.route('/leaderboard', methods=['GET'])
 def get_leaderboard():
