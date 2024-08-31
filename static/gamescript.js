@@ -184,6 +184,12 @@ function loadQuestion() {
     enableAnswerButtons();
 }
 
+function playExplosionSound() {
+    const explosionSound = document.getElementById('explosionSound');
+    explosionSound.currentTime = 0;
+    explosionSound.play();
+}
+
 function checkAnswer(answer) {
     if (isProcessingAnswer) return;
 
@@ -204,6 +210,7 @@ function checkAnswer(answer) {
         if (incorrectAnswers >= 5) {
             progressImage.src = incorrectImageSrc;
             progressImage.style.height = "1500px";
+            playExplosionSound();
             stopStopWatch();
             showEndMessage(`Quiz Failed! You answered 5 questions incorrectly`);
             setTimeout(() => {
@@ -220,6 +227,7 @@ function checkAnswer(answer) {
         loadQuestion();
     }, 3000);
 }
+
 
 function updateProgressBar(correctAnswers, totalQuestionsToWin) {
     const progressPercentage = (correctAnswers / totalQuestionsToWin) * 100;

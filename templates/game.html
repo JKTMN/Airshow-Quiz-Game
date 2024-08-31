@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='gamestyles.css') }}">
 </head>
 <body>
+    <audio id="explosionSound" src="{{ url_for('static', filename='sounds/explosion.mp3') }}" preload="auto"></audio>
+
     <img id="title" src="../static/images/secure-the-aircraft.png">
     <div id="countdown"></div>
     <p id="stopwatch">0</p>
