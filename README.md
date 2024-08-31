@@ -2,7 +2,7 @@
 
 ## Overview
 
-"Cyber Defense: Protect the Aircraft" is an interactive web-based quiz game created for use at the Bournemouth Air-festival, where players must answer cybersecurity-related questions to protect an aircraft from a cyberattack. The game challenges the player to correctly answer 10 questions to secure the aircraft while avoiding 5 incorrect answers, which would lead to the plane becoming vulnerable... and exploding.
+"Cyber Defense: Protect the Aircraft" is an interactive web-based quiz game created for use at the Bournemouth Air-festival on behalf of the Bournemouth Univsit Computing and Informatics Department, where players must answer cybersecurity-related questions to protect an aircraft from a cyberattack. The game challenges the player to correctly answer 10 questions to secure the aircraft while avoiding 5 incorrect answers, which would lead to the plane becoming vulnerable... and exploding.
 
 The game features a leaderboard that records the fastest players, encouraging speed and accuracy.
 
@@ -12,7 +12,7 @@ The game features a leaderboard that records the fastest players, encouraging sp
 - **Dynamic Progress Bar**: The progress bar and accompanying image dynamically update based on the player's performance.
 - **Leaderboard**: Records and displays the top players based on the time taken to complete the quiz.
 - **Player Statistics**: Tracks the number of quizzes started, completed, the completion rate, and the average time on the leaderboard.
-- **Data Export**: Allows players to export their stats as CSV or JSON files.
+- **Data Export**: Allows for export of relevant stats as CSV or JSON files.
 
 ## Setup Instructions
 
@@ -37,6 +37,33 @@ The game features a leaderboard that records the fastest players, encouraging sp
    If using a Python Flask server:
    ```bash
    flask run
+
+### Resetting the Counters
+
+To reset the counters for the number of players who have started and completed the quiz, follow these steps:
+
+1. **Open the JavaScript File**:
+   Locate the file named `gamescript.js` or the JavaScript file where the code is implemented.
+
+2. **Uncomment the Reset Function**:
+   Find the code block that is responsible for resetting the counters. Remove the comment markers to uncomment the code. The code block looks like this:
+   ```javascript
+   // function resetCounters() {
+   //     localStorage.setItem('playerCounter', 0);
+   //     localStorage.setItem('quizCompleteCounter', 0);
+   //     console.log('Player counter and quiz complete counter has been reset to 0');
+   // }
+   
+   // resetCounters();
+
+3. **Save the Changes**:
+   Save the file after uncommenting the code.
+
+4. **Reload the Game**:
+   Refresh your browser or restart the game server to ensure the reset takes effect.
+
+This process will reset the counters for the number of players who started and completed the quiz to zero. Use this feature with caution as it will erase the current statistics.
+**Remember to comment the code out again after resetting!**
 
 ## Access the Game
 
@@ -63,7 +90,7 @@ Open your browser and go to `http://127.0.0.1:5000` (or your server's address).
    * The leaderboard displays the top players and their times.
 
 5. **Exporting Statistics**:
-   * On the statistics page, you can export your game data as a CSV or JSON file.
+   * On the statistics page, you can export game data as a CSV or JSON file.
 
 ## Leaderboard and Statistics
 
